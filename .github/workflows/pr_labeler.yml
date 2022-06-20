@@ -1,0 +1,12 @@
+name: 'PR Labeler'
+on:
+  - pull_request_target
+
+jobs:
+  labeler:
+    name: PR Labeler
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/labeler@v4.0.0
+        with:
+          repo-token: '${{ secrets.GITHUB_TOKEN }}'
